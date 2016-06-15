@@ -41,11 +41,13 @@ module.config(function($stateProvider) {
             if ($scope.displayImageNumber + 1 < $scope.imageList.length) {
                 $scope.displayImageNumber++;
             }
+            dataModelFunctional.SetCursor($scope.displayImageNumber);
         };
         $scope.PrevImage = function() {
             if ($scope.displayImageNumber - 1 >= 0) {
                 $scope.displayImageNumber--;
             }
+            dataModelFunctional.SetCursor($scope.displayImageNumber);
         };
 
         $scope.UpdateToServer = function() {
@@ -121,6 +123,7 @@ module.config(function($stateProvider) {
         $scope.Answer = function(type) {
             if ($scope.task.type == 2) {
                 dataModelFunctional.Tasks.Solve($scope.task.taskName, $scope.task.code, $scope.answer.text);
+                $scope.dataLoaded = 2;
             }
 
             if ($scope.task.type == 3) {
@@ -134,6 +137,10 @@ module.config(function($stateProvider) {
                             $scope.answer.color
                     }
                 );
+                if (type == 0) {
+                    $scope.NextImage();
+                }
+                $scope.dataLoaded = 2;
             }
 
             if ($scope.task.type == 4) {
@@ -152,8 +159,12 @@ module.config(function($stateProvider) {
                             $scope.answer.color
                     }
                 );
+                if (type == 0) {
+                    $scope.NextImage();
+                }
                 $scope.answer.colorCode = "";
                 $scope.answer.colorDesc = "";
+                $scope.dataLoaded = 2;
             }
 
             $scope.task.type = 0;
@@ -174,9 +185,11 @@ module.config(function($stateProvider) {
                         return prop.name.val != code;
                     });
                 }
+                $scope.dataLoaded = 2;
             },
             updateNotes: function() {
                 dataModelFunctional.Notes.Set($scope.info.code, $scope.info.obj.notes);
+                $scope.dataLoaded = 2;
             }
         };
         $scope.GetInfo = function() {

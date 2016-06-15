@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6638cbc-3a7e-4cce-905a-7fb09bc370df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/css/index.css" afterPath="$PROJECT_DIR$/app/public/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/home/home.html" afterPath="$PROJECT_DIR$/app/public/home/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/app.js" afterPath="$PROJECT_DIR$/app/public/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/home/homeCtrl.js" afterPath="$PROJECT_DIR$/app/public/home/homeCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/models/dataModel.js" afterPath="$PROJECT_DIR$/app/public/models/dataModel.js" />
     </list>
@@ -48,25 +47,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/public/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.957204">
+            <state vertical-scroll-proportion="-27.958334">
               <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homeCtrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="homeCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/public/home/homeCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="200" column="51" selection-start-line="200" selection-start-column="51" selection-end-line="200" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.7517241">
+              <caret line="187" column="38" selection-start-line="187" selection-start-column="38" selection-end-line="187" selection-end-column="38" />
               <folding>
                 <element signature="e#648#662#0" expanded="false" />
-                <element signature="e#1110#1255#0" expanded="false" />
-                <element signature="e#1295#1419#0" expanded="false" />
+                <element signature="e#1110#1325#0" expanded="false" />
+                <element signature="e#1365#1559#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -86,15 +85,15 @@
         <entry file="file://$PROJECT_DIR$/app/public/models/dataModel.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="138" column="30" selection-start-line="138" selection-start-column="30" selection-end-line="138" selection-end-column="30" />
+              <caret line="143" column="26" selection-start-line="143" selection-start-column="26" selection-end-line="143" selection-end-column="26" />
               <folding>
                 <element signature="e#1727#1894#0" expanded="false" />
                 <element signature="e#1934#2001#0" expanded="false" />
                 <element signature="e#4576#4618#0" expanded="false" />
                 <element signature="e#4655#4700#0" expanded="false" />
                 <element signature="e#4732#4772#0" expanded="false" />
-                <element signature="e#4823#4864#0" expanded="false" />
-                <element signature="e#4896#4939#0" expanded="false" />
+                <element signature="e#4894#4935#0" expanded="false" />
+                <element signature="e#4967#5010#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -104,7 +103,7 @@
         <entry file="file://$PROJECT_DIR$/app/public/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="64" selection-start-line="0" selection-start-column="64" selection-end-line="0" selection-end-column="64" />
+              <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -118,14 +117,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/public/app.js" />
         <option value="$PROJECT_DIR$/app/public/index.html" />
         <option value="$PROJECT_DIR$/app/public/showImage/showImageDir.js" />
         <option value="$PROJECT_DIR$/app/app.js" />
-        <option value="$PROJECT_DIR$/app/public/models/dataModel.js" />
-        <option value="$PROJECT_DIR$/app/public/home/homeCtrl.js" />
         <option value="$PROJECT_DIR$/app/public/home/home.html" />
         <option value="$PROJECT_DIR$/app/public/css/index.css" />
+        <option value="$PROJECT_DIR$/app/public/models/dataModel.js" />
+        <option value="$PROJECT_DIR$/app/public/app.js" />
+        <option value="$PROJECT_DIR$/app/public/home/homeCtrl.js" />
       </list>
     </option>
   </component>
@@ -368,30 +367,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="64" selection-start-line="0" selection-start-column="64" selection-end-line="0" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/models/dataModel.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="138" column="30" selection-start-line="138" selection-start-column="30" selection-end-line="138" selection-end-column="30" />
-          <folding>
-            <element signature="e#1727#1894#0" expanded="false" />
-            <element signature="e#1934#2001#0" expanded="false" />
-            <element signature="e#4576#4618#0" expanded="false" />
-            <element signature="e#4655#4700#0" expanded="false" />
-            <element signature="e#4732#4772#0" expanded="false" />
-            <element signature="e#4823#4864#0" expanded="false" />
-            <element signature="e#4896#4939#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -408,14 +383,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/home/homeCtrl.js">
+    <entry file="file://$PROJECT_DIR$/app/public/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-27.958334">
+          <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/models/dataModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="200" column="51" selection-start-line="200" selection-start-column="51" selection-end-line="200" selection-end-column="51" />
+          <caret line="143" column="26" selection-start-line="143" selection-start-column="26" selection-end-line="143" selection-end-column="26" />
           <folding>
-            <element signature="e#648#662#0" expanded="false" />
-            <element signature="e#1110#1255#0" expanded="false" />
-            <element signature="e#1295#1419#0" expanded="false" />
+            <element signature="e#1727#1894#0" expanded="false" />
+            <element signature="e#1934#2001#0" expanded="false" />
+            <element signature="e#4576#4618#0" expanded="false" />
+            <element signature="e#4655#4700#0" expanded="false" />
+            <element signature="e#4732#4772#0" expanded="false" />
+            <element signature="e#4894#4935#0" expanded="false" />
+            <element signature="e#4967#5010#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -430,11 +417,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/css/index.css">
+    <entry file="file://$PROJECT_DIR$/app/public/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.957204">
-          <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="26" selection-start-line="7" selection-start-column="26" selection-end-line="7" selection-end-column="26" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/home/homeCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7517241">
+          <caret line="187" column="38" selection-start-line="187" selection-start-column="38" selection-end-line="187" selection-end-column="38" />
+          <folding>
+            <element signature="e#648#662#0" expanded="false" />
+            <element signature="e#1110#1325#0" expanded="false" />
+            <element signature="e#1365#1559#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -140,6 +140,9 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout) {
         return Server.GetJSON();
     };
 
+    this.SetCursor = function(val) {
+        imageCursor = val;
+    };
     this.Images = {
         GetList: function() {
             return imageList;
