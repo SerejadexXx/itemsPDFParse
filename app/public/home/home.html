@@ -1,9 +1,14 @@
-<div class="container">
+<div class="container" ng-show="!jsonShowEnabled">
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col-xs-8 textCenter">
             <h5>
                 Working on access-code: {{accessCode}}
             </h5>
+        </div>
+        <div class="col-xs-4">
+            <button class="btn btn-block btn-default" ng-click="ShowJSON()">
+                JSON
+            </button>
         </div>
     </div>
     <div class="row">
@@ -158,6 +163,18 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+<div class="container" ng-show="jsonShowEnabled">
+    <div class="row">
+        <div class="col-xs-12 paddingBottom10 homeInfoCloseButton" ng-click="CloseJSON()">
+            <i class="glyphicon glyphicon-remove"></i>
+        </div>
+        <div class="col-xs-12">
+            <textarea disabled class="homeHalfScreen">
+                {{jsonString}}
+            </textarea>
         </div>
     </div>
 </div>

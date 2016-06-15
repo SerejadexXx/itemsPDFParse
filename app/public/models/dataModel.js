@@ -116,6 +116,18 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout) {
 
             UpdateByLast();
             return defer.promise;
+        },
+        GetJSON: function() {
+            return JSON.stringify({
+                values: items,
+                imgCount: imagesCount,
+                imageCursor: imageCursor,
+                imageList: imageList,
+                notes: notes,
+                addedCodes: addedCodes,
+                addedColors: addedColors,
+                taskNamesList: taskNamesList
+            });
         }
     };
     this.FetchData = function() {
@@ -123,6 +135,9 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout) {
     };
     this.UpdateByLast = function() {
         return Server.UpdateByLast();
+    };
+    this.GetJSON = function() {
+        return Server.GetJSON();
     };
 
     this.Images = {

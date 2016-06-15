@@ -193,4 +193,14 @@ module.config(function($stateProvider) {
         $scope.CloseInfo = function() {
             $scope.infoEnabled = false;
         };
+
+        $scope.jsonShowEnabled = false;
+        $scope.jsonString = "";
+        $scope.ShowJSON = function() {
+            $scope.jsonShowEnabled = true;
+            $scope.jsonString = dataModelFunctional.GetJSON();
+        };
+        $scope.CloseJSON = function() {
+            $scope.jsonShowEnabled = false;
+        };
     });
