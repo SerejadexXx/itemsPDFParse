@@ -1,0 +1,163 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h5>
+                Working on access-code: {{accessCode}}
+            </h5>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 noPadding">
+            <button ng-class="{
+                   'btn': true,
+                   'btn-block': true,
+                   'btn-success': dataLoaded == 1,
+                   'btn-warning': dataLoaded == 0,
+                   'btn-danger': dataLoaded == 2
+                }" ng-click="UpdateToServer()">Статус данных</button>
+            <div class="container-fluid" ng-hide="infoEnabled">
+                <div class="row">
+                    <div class="col-xs-1 homeMainImageWrapper homeMainImageChevron" ng-click="PrevImage()">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                    </div>
+                    <div class="col-xs-10 noPadding">
+                        <div class="homeMainImageWrapper">
+                            <show-image src-name="{{displayImageNumber > -1 ? imageList[displayImageNumber] : '/data/placeholder'}}" class="homeMainImage"></show-image>
+                        </div>
+                    </div>
+                    <div class="col-xs-1 homeMainImageWrapper homeMainImageChevron" ng-click="NextImage()">
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </div>
+                </div>
+                <div class="row paddingTop10">
+                    <div class="col-xs-12">
+                        <input type="text" ng-model="item.code" placeholder="код">
+                    </div>
+                </div>
+                <div class="row paddingTop10">
+                    <div class="col-xs-6">
+                        <button class="btn btn-block btn-default" ng-click="NextTask()">Следующее задание</button>
+                    </div>
+                    <div class="col-xs-6">
+                        <button class="btn btn-block btn-default" ng-click="GetInfo()">Информация</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="row" ng-show="task.type==1">
+                        <div class="col-xs-12">
+                            <h5>
+                                {{task.desc}}
+                            </h5>
+                        </div>
+                        <div class="col-xs-12">
+                            <button class="btn btn-block btn-default" ng-click="NewCode()">
+                                Добавить новый код
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-show="task.type==2">
+                        <div class="col-xs-12 textCenter paddingTop10 paddingBottom10">
+                            {{task.desc}}
+                        </div>
+                        <div class="col-xs-8 textCenter">
+                            <input type="text" ng-model="answer.text" placeholder="название">
+                        </div>
+                        <div class="col-xs-4">
+                            <button class="btn btn-block btn-default" ng-click="Answer()">Добавить</button>
+                        </div>
+                    </div>
+
+                    <div class="row" ng-show="task.type==3">
+                        <div class="col-xs-12 textCenter paddingTop10 paddingBottom10">
+                            {{task.desc}}
+                        </div>
+                        <div class="col-xs-8">
+                            <button class="btn btn-block btn-default" ng-click="Answer(0)">Выбрать текущую фотографию</button>
+                        </div>
+                        <div class="col-xs-4">
+                            <button class="btn btn-block btn-default" ng-click="Answer(1)">Выбрать цвет</button>
+                        </div>
+                        <div class="col-xs-12 paddingTop10 paddingBottom10">
+                            Цвет для товара <input type="color" ng-model="answer.color">
+                        </div>
+                    </div>
+                    <div class="row" ng-show="task.type==4">
+                        <div class="col-xs-12 textCenter paddingTop10 paddingBottom10">
+                            {{task.desc}}
+                        </div>
+                        <div class="col-xs-5 paddingBottom10">
+                            <input type="text" ng-model="answer.colorCode" placeholder="код цвета">
+                        </div>
+                        <div class="col-xs-7 paddingBottom10">
+                            <input type="text" ng-model="answer.colorDesc" placeholder="описание цвета">
+                        </div>
+                        <div class="col-xs-8">
+                            <button class="btn btn-block btn-default" ng-click="Answer(0)">Выбрать текущую фотографию</button>
+                        </div>
+                        <div class="col-xs-4">
+                            <button class="btn btn-block btn-default" ng-click="Answer(1)">Выбрать цвет</button>
+                        </div>
+                        <div class="col-xs-12 paddingTop10 paddingBottom10">
+                            Цвет для товара <input type="color" ng-model="answer.color">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid homeInfoMaxHeightScroll" ng-show="infoEnabled">
+                <div class="row paddingTop10">
+                    <div class="col-xs-10 textCenter">
+                        <h5>Закрыть</h5>
+                    </div>
+                    <div class="col-xs-2 paddingTop10 textCenter homeInfoCloseButton" ng-click="CloseInfo()">
+                        <i class="glyphicon glyphicon-remove"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-2 textCenter">
+                        Код:
+                    </div>
+                    <div class="col-xs-7 textCenter">
+                        {{info.code}}
+                    </div>
+                </div>
+                <div class="row">
+                    <textarea ng-model="info.obj.notes" placeholder="Заметки" ng-change="info.updateNotes()"></textarea>
+                </div>
+                <div class="row" ng-repeat="prop in info.obj.props track by $index">
+                    <div class="col-xs-2 textCenter">
+                        {{prop.name.disp}}:
+                    </div>
+                    <div class="col-xs-7 textCenter">
+                        {{prop.ans}}
+                    </div>
+                    <div class="col-xs-2 textCenter homeInfoCloseButton"
+                         ng-click="prop.remove(prop.name, info.code); info.remove('prop', prop.name.val)">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </div>
+                </div>
+                <div class="row" ng-repeat="uImage in info.obj.imgs">
+                    <div class="col-xs-10">
+                        <div class="row">
+                            <div class="col-xs-12" ng-show="uImage.colorUrl">
+                                <div class="homeInfoListItemImage" ng-style="{'background-image': 'url({{uImage.colorUrl}})'}"></div>
+                            </div>
+                            <div class="col-xs-12" ng-show="uImage.colorRGB">
+                                <div class="homeInfoListItemImage" ng-style="{'background-color': '{{uImage.colorRGB}}'}"></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 textCenter">
+                                {{uImage.colorDesc}} ({{uImage.colorCode}})
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-2 homeInfoImageRemove"
+                         ng-click="uImage.remove(info.code, uImage.colorCode); info.remove('img', uImage.colorCode)">
+                        <i class="glyphicon glyphicon-trash"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
