@@ -70,13 +70,18 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
                         taskNamesList = [
                         ];
                     }
-                    taskList = [];
-                    taskNamesList.forEach(function(task) {
-                        taskList.push({
-                            name: task,
-                            rez: []
+
+                    if (data.taskList) {
+                        taskList = data.taskList;
+                    } else {
+                        taskList = [];
+                        taskNamesList.forEach(function (task) {
+                            taskList.push({
+                                name: task,
+                                rez: []
+                            });
                         });
-                    });
+                    }
 
                     if (data.notes) {
                         notes = data.notes;
@@ -118,7 +123,8 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
                             notes: notes,
                             addedCodes: addedCodes,
                             addedColors: addedColors,
-                            taskNamesList: taskNamesList
+                            taskNamesList: taskNamesList,
+                            taskList: taskList
                         }
                     }).then(
                         function() {
@@ -150,7 +156,8 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
                 notes: notes,
                 addedCodes: addedCodes,
                 addedColors: addedColors,
-                taskNamesList: taskNamesList
+                taskNamesList: taskNamesList,
+                taskList: taskList
             });
         }
     };
