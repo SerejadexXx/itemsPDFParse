@@ -14,8 +14,15 @@ module.config(function($stateProvider) {
         $rootScope,
         $stateParams,
         $window,
+        $timeout,
         dataModelFunctional
     ) {
+        $scope.imageTimes = 0;
+        $rootScope.pictureTimesUpdated = 0;
+        $rootScope.$watch('pictureTimesUpdated', function() {
+            $scope.imageTimes = dataModelFunctional.GetPictureTimes();
+        });
+
         if ($stateParams.accessCode && $stateParams.accessCode.length > 0) {
             $window.localStorage.accessCode = $stateParams.accessCode;
         }
@@ -112,6 +119,7 @@ module.config(function($stateProvider) {
                     + ColorTask.colorCode + ']';
                 $scope.task.code = $scope.item.code;
                 $scope.task.colorCode = ColorTask.colorCode;
+                $scope.answer.color = dataModelFunctional.GetRGBForColorCode(ColorTask.colorCode);
                 return;
             }
 
@@ -204,6 +212,7 @@ module.config(function($stateProvider) {
             $scope.infoEnabled = true;
         };
         $scope.CloseInfo = function() {
+            dataModelFunctional.UpdatePictureTimes();
             $scope.infoEnabled = false;
         };
 

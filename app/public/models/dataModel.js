@@ -1,6 +1,30 @@
 var module = angular.module('dataModel', []);
 
-module.service('dataModelFunctional', function($window, $http, $q, $timeout) {
+module.service('dataModelFunctional', function($window, $http, $q, $timeout, $rootScope) {
+    var times = 0;
+    var CalcPictureTimes = function() {
+        times = 0;
+        items.forEach(function(item) {
+            if (item.colorUrl == $rootScope.currentUrl) {
+                times++;
+            }
+        });
+        addedColors.forEach(function(item) {
+            if (item.colorUrl == $rootScope.currentUrl) {
+                times++;
+            }
+        });
+        $rootScope.pictureTimesUpdated++;
+    };
+    $rootScope.$watch('currentUrl', function() {
+        CalcPictureTimes();
+    });
+    this.UpdatePictureTimes = function() {
+        CalcPictureTimes();
+    };
+    this.GetPictureTimes = function() {
+        return times;
+    };
     var imagesCount = 0;
     var imageCursor = 0;
     var items = [];
@@ -334,6 +358,25 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout) {
         }
     };
     this.Notes = Notes;
+
+    this.GetRGBForColorCode = function(colorCode) {
+        var ans = '#000000';
+        items.forEach(function(item) {
+            if (item.colorCode == colorCode) {
+                if (item.colorRGB) {
+                    ans = item.colorRGB;
+                }
+            }
+        });
+        addedColors.forEach(function(item) {
+            if (item.colorCode == colorCode) {
+                if (item.colorRGB) {
+                    ans = item.colorRGB;
+                }
+            }
+        });
+        return ans;
+    };
 
 
     this.Info = {
