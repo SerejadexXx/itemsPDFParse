@@ -142,11 +142,11 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
             return defer.promise;
         },
         GetJSON: function() {
+            var jItems = items.filter(function(item) {
+                return item.colorUrl || item.colorRGB;
+            });
             return JSON.stringify({
-                values: items,
-                imgCount: imagesCount,
-                imageCursor: imageCursor,
-                imageList: imageList,
+                values: jItems,
                 notes: notes,
                 addedCodes: addedCodes,
                 addedColors: addedColors,
