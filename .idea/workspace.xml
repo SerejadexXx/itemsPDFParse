@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6638cbc-3a7e-4cce-905a-7fb09bc370df" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/css/index.css" afterPath="$PROJECT_DIR$/app/public/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/home/home.html" afterPath="$PROJECT_DIR$/app/public/home/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/home/homeCtrl.js" afterPath="$PROJECT_DIR$/app/public/home/homeCtrl.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/models/dataModel.js" afterPath="$PROJECT_DIR$/app/public/models/dataModel.js" />
     </list>
     <ignored path="itemsPDFParse.iws" />
@@ -36,20 +39,20 @@
       <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/public/home/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.625">
-              <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
+            <state vertical-scroll-proportion="-17.958334">
+              <caret line="178" column="78" selection-start-line="178" selection-start-column="78" selection-end-line="178" selection-end-column="78" />
               <folding>
-                <marker date="1466185224000" expanded="true" signature="491:731" placeholder="{&quot;btn&quot;: true...}" />
+                <marker date="1466341887000" expanded="true" signature="491:731" placeholder="{&quot;btn&quot;: true...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/public/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.70042795">
+              <caret line="76" column="16" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -59,7 +62,7 @@
         <entry file="file://$PROJECT_DIR$/app/public/home/homeCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="121" column="76" selection-start-line="121" selection-start-column="58" selection-end-line="121" selection-end-column="76" />
+              <caret line="134" column="47" selection-start-line="134" selection-start-column="47" selection-end-line="134" selection-end-column="47" />
               <folding>
                 <element signature="e#887#901#0" expanded="false" />
                 <element signature="e#1349#1564#0" expanded="false" />
@@ -72,18 +75,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/public/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-11.25">
               <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dataModel.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="dataModel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/public/models/dataModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1241379">
-              <caret line="159" column="34" selection-start-line="159" selection-start-column="34" selection-end-line="159" selection-end-column="34" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="444" column="59" selection-start-line="444" selection-start-column="59" selection-end-line="444" selection-end-column="59" />
               <folding>
                 <element signature="e#2530#2717#0" expanded="false" />
                 <element signature="e#2779#2846#0" expanded="false" />
@@ -118,11 +121,11 @@
         <option value="$PROJECT_DIR$/app/public/index.html" />
         <option value="$PROJECT_DIR$/app/public/showImage/showImageDir.js" />
         <option value="$PROJECT_DIR$/app/app.js" />
-        <option value="$PROJECT_DIR$/app/public/css/index.css" />
         <option value="$PROJECT_DIR$/app/public/app.js" />
-        <option value="$PROJECT_DIR$/app/public/home/home.html" />
         <option value="$PROJECT_DIR$/app/public/home/homeCtrl.js" />
         <option value="$PROJECT_DIR$/app/public/models/dataModel.js" />
+        <option value="$PROJECT_DIR$/app/public/home/home.html" />
+        <option value="$PROJECT_DIR$/app/public/css/index.css" />
       </list>
     </option>
   </component>
@@ -386,7 +389,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="174" column="52" selection-start-line="174" selection-start-column="38" selection-end-line="174" selection-end-column="52" />
           <folding>
-            <marker date="1466185224000" expanded="true" signature="491:731" placeholder="{&quot;btn&quot;: true...}" />
+            <marker date="1466341887000" expanded="true" signature="491:731" placeholder="{&quot;btn&quot;: true...}" />
           </folding>
         </state>
       </provider>
@@ -458,22 +461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="90" column="17" selection-start-line="90" selection-start-column="17" selection-end-line="90" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/public/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -482,32 +469,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/home/home.html">
+    <entry file="file://$PROJECT_DIR$/app/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.625">
-          <caret line="25" column="50" selection-start-line="25" selection-start-column="50" selection-end-line="25" selection-end-column="50" />
-          <folding>
-            <marker date="1466185224000" expanded="true" signature="491:731" placeholder="{&quot;btn&quot;: true...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/home/homeCtrl.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="121" column="76" selection-start-line="121" selection-start-column="58" selection-end-line="121" selection-end-column="76" />
-          <folding>
-            <element signature="e#887#901#0" expanded="false" />
-            <element signature="e#1349#1564#0" expanded="false" />
-            <element signature="e#1604#1798#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="-11.25">
+          <caret line="18" column="36" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/public/models/dataModel.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1241379">
-          <caret line="159" column="34" selection-start-line="159" selection-start-column="34" selection-end-line="159" selection-end-column="34" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="444" column="59" selection-start-line="444" selection-start-column="59" selection-end-line="444" selection-end-column="59" />
           <folding>
             <element signature="e#2530#2717#0" expanded="false" />
             <element signature="e#2779#2846#0" expanded="false" />
@@ -517,6 +490,36 @@
             <element signature="e#5831#5872#0" expanded="false" />
             <element signature="e#5904#5947#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/home/homeCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="134" column="47" selection-start-line="134" selection-start-column="47" selection-end-line="134" selection-end-column="47" />
+          <folding>
+            <element signature="e#887#901#0" expanded="false" />
+            <element signature="e#1349#1564#0" expanded="false" />
+            <element signature="e#1604#1798#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/home/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.958334">
+          <caret line="178" column="78" selection-start-line="178" selection-start-column="78" selection-end-line="178" selection-end-column="78" />
+          <folding>
+            <marker date="1466341887000" expanded="true" signature="491:731" placeholder="{&quot;btn&quot;: true...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.70042795">
+          <caret line="76" column="16" selection-start-line="76" selection-start-column="16" selection-end-line="76" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>

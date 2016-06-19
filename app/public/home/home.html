@@ -89,7 +89,17 @@
                             <button class="btn btn-block btn-default" ng-click="Answer(1)">Выбрать цвет</button>
                         </div>
                         <div class="col-xs-12 paddingTop10 paddingBottom10">
-                            Цвет для товара <input type="color" ng-model="answer.color">
+                            Цвет для товара
+                            <div class="row">
+                                <div class="col-xs-2 textCenter" ng-repeat="color in answer.color track by $index">
+                                    <input type="color" ng-model="color.val">
+                                    <br>
+                                    <i class="glyphicon glyphicon-remove homeMainChevronCover" ng-click="AnswerColor.remove($index)"></i>
+                                </div>
+                                <div class="col-xs-2">
+                                    <i class="glyphicon glyphicon-plus homeMainChevronCover" ng-click="AnswerColor.push()"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="row" ng-show="task.type==4">
@@ -109,7 +119,17 @@
                             <button class="btn btn-block btn-default" ng-click="Answer(1)">Выбрать цвет</button>
                         </div>
                         <div class="col-xs-12 paddingTop10 paddingBottom10">
-                            Цвет для товара <input type="color" ng-model="answer.color">
+                            Цвет для товара
+                            <div class="row">
+                                <div class="col-xs-2 textCenter" ng-repeat="color in answer.color track by $index">
+                                    <input type="color" ng-model="color.val">
+                                    <br>
+                                    <i class="glyphicon glyphicon-remove homeMainChevronCover" ng-click="AnswerColor.remove($index)"></i>
+                                </div>
+                                <div class="col-xs-2">
+                                    <i class="glyphicon glyphicon-plus homeMainChevronCover" ng-click="AnswerColor.push()"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -153,7 +173,12 @@
                                 <div class="homeInfoListItemImage" ng-style="{'background-image': 'url({{uImage.colorUrl}})'}"></div>
                             </div>
                             <div class="col-xs-12" ng-show="uImage.colorRGB">
-                                <div class="homeInfoListItemImage" ng-style="{'background-color': '{{uImage.colorRGB}}'}"></div>
+                                <div class="homeInfoListItemImageRGB">
+                                    <div class="homeInfoListItemImageRGBItem"
+                                         ng-repeat="color in uImage.colorRGB track by $index"
+                                         ng-style="{backgroundColor: color.val}">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="row">

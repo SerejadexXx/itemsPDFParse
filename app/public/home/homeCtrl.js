@@ -84,9 +84,22 @@ module.config(function($stateProvider) {
         };
         $scope.answer = {
             text: '',
-            color: '#000000',
+            color: [{val: '#000000'}],
             colorCode: '',
             colorDesc: ''
+        };
+
+        $scope.AnswerColor = {
+            push: function() {
+                if ($scope.answer.color.length < 6) {
+                    $scope.answer.color.push({val: '#000000'});
+                }
+            },
+            remove: function(index) {
+                if ($scope.answer.color.length > 1) {
+                    $scope.answer.color.splice(index, 1);
+                }
+            }
         };
 
         $scope.NewCode = function() {
@@ -119,7 +132,7 @@ module.config(function($stateProvider) {
                     + ColorTask.colorCode + ']';
                 $scope.task.code = $scope.item.code;
                 $scope.task.colorCode = ColorTask.colorCode;
-                $scope.answer.color = dataModelFunctional.GetRGBForColorCode(ColorTask.colorCode);
+                $scope.answer.color = JSON.parse(dataModelFunctional.GetRGBForColorCode(ColorTask.colorCode));
                 return;
             }
 
@@ -142,7 +155,7 @@ module.config(function($stateProvider) {
                         type: type,
                         val: type == 0 ?
                             $rootScope.currentUrl :
-                            $scope.answer.color
+                            JSON.stringify($scope.answer.color)
                     }
                 );
                 if (type == 0) {
@@ -164,7 +177,7 @@ module.config(function($stateProvider) {
                         type: type,
                         val: type == 0 ?
                             $rootScope.currentUrl :
-                            $scope.answer.color
+                            JSON.stringify($scope.answer.color)
                     }
                 );
                 if (type == 0) {

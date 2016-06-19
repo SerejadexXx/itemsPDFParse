@@ -367,7 +367,7 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
     this.Notes = Notes;
 
     this.GetRGBForColorCode = function(colorCode) {
-        var ans = '#000000';
+        var ans = JSON.stringify([{val: '#000000'}]);
         items.forEach(function(item) {
             if (item.colorCode == colorCode) {
                 if (item.colorRGB) {
@@ -419,7 +419,7 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
                 if (item.colorRGB) {
                     obj.imgs.push({
                         type: 1,
-                        colorRGB: item.colorRGB,
+                        colorRGB: JSON.parse(item.colorRGB),
                         colorCode: item.colorCode,
                         colorDesc: item.colorDesc,
                         remove: Tasks.RemoveAnswerColorTask
@@ -442,7 +442,7 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
                 if (item.colorRGB) {
                     obj.imgs.push({
                         type: 1,
-                        colorRGB: item.colorRGB,
+                        colorRGB: JSON.parse(item.colorRGB),
                         colorCode: item.colorCode,
                         colorDesc: item.colorDesc,
                         remove: AddedColors.Remove
