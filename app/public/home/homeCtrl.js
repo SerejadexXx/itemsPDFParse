@@ -240,6 +240,8 @@ module.config(function($stateProvider) {
             add: function() {
                 dataModelFunctional.AddToTaskList(JSON.parse(JSON.stringify($scope.taskList.newTask)));
                 $scope.taskList.list = dataModelFunctional.GetTaskList();
+                $scope.taskList.newTask.disp = "";
+                $scope.taskList.newTask.val = "";
                 $scope.dataLoaded = 2;
             },
             remove: function(index) {
@@ -248,13 +250,31 @@ module.config(function($stateProvider) {
                 $scope.dataLoaded = 2;
             }
         };
+        $scope.displayFields = {
+            list: [],
+            newField: {
+                disp: "",
+                val: ""
+            },
+            add: function() {
+                dataModelFunctional.AddToFieldsDisplayList(JSON.parse(JSON.stringify($scope.displayFields.newField)));
+                $scope.displayFields.list = dataModelFunctional.GetFieldsDisplayList();
+                $scope.displayFields.newField.disp = "";
+                $scope.displayFields.newField.val = "";
+                $scope.dataLoaded = 2;
+            },
+            remove: function(index) {
+                dataModelFunctional.RemoveFromFieldsDisplayList(index);
+                $scope.displayFields.list = dataModelFunctional.GetFieldsDisplayList();
+                $scope.dataLoaded = 2;
+            }
+        };
         $scope.ShowJSON = function() {
             $scope.jsonShowEnabled = true;
             $scope.jsonString = dataModelFunctional.GetJSON();
 
             $scope.taskList.list = dataModelFunctional.GetTaskList();
-            $scope.taskList.newTask.disp = "";
-            $scope.taskList.newTask.val = "";
+            $scope.displayFields.list = dataModelFunctional.GetFieldsDisplayList();
         };
         $scope.CloseJSON = function() {
             $scope.jsonShowEnabled = false;

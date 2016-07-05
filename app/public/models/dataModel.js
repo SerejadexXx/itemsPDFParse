@@ -32,6 +32,7 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
     var imageList = [];
     var taskNamesList = [];
     var taskList = [];
+    var fieldsDisplayList = [];
     var addedCodes = [];
     var addedColors = [];
     var Server = {
@@ -83,6 +84,12 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
                         });
                     }
 
+                    if (data.fieldsDisplayList) {
+                        fieldsDisplayList = data.fieldsDisplayList;
+                    } else {
+                        fieldsDisplayList = [];
+                    }
+
                     if (data.notes) {
                         notes = data.notes;
                     } else {
@@ -124,7 +131,8 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
                             addedCodes: addedCodes,
                             addedColors: addedColors,
                             taskNamesList: taskNamesList,
-                            taskList: taskList
+                            taskList: taskList,
+                            fieldsDisplayList: fieldsDisplayList
                         }
                     }).then(
                         function() {
@@ -157,7 +165,8 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
                 addedCodes: addedCodes,
                 addedColors: addedColors,
                 taskNamesList: taskNamesList,
-                taskList: taskList
+                taskList: taskList,
+                fieldsDisplayList: fieldsDisplayList
             });
         }
     };
@@ -259,6 +268,17 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
         taskNamesList.splice(index, 1);
         taskList.splice(index, 1);
     };
+
+    this.GetFieldsDisplayList = function() {
+        return fieldsDisplayList;
+    };
+    this.AddToFieldsDisplayList = function(val) {
+        fieldsDisplayList.push(val);
+    };
+    this.RemoveFromFieldsDisplayList = function(index) {
+        fieldsDisplayList.splice(index, 1);
+    };
+
     this.Tasks = {
         Get: function(code) {
             var names = taskNamesList.filter(function(taskName) {

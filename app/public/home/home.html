@@ -202,7 +202,40 @@
 </div>
 <div class="container" ng-show="jsonShowEnabled">
     <div class="row">
+        <div class="col-xs-12 paddingBottom10 homeInfoCloseButton" ng-click="CloseJSON()">
+            <i class="glyphicon glyphicon-remove"></i>
+        </div>
+    </div>
+    <div class="row">
         <div class="container-fluid">
+            <div class="row">
+                <h4>Поля</h4>
+            </div>
+            <div class="row" ng-repeat="field in displayFields.list track by $index">
+                <div class="col-xs-5">
+                    <h5>{{field.val}}</h5>
+                </div>
+                <div class="col-xs-5">
+                    <h5>{{field.disp}}</h5>
+                </div>
+                <div class="col-xs-2">
+                    <button class="btn btn-danger" ng-click="displayFields.remove($index)">remove</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-5">
+                    <input type="text" ng-model="displayFields.newField.val" placeholder="val">
+                </div>
+                <div class="col-xs-5">
+                    <input type="text" ng-model="displayFields.newField.disp" placeholder="disp">
+                </div>
+                <div class="col-xs-2">
+                    <button class="btn btn-default" ng-click="displayFields.add()">add</button>
+                </div>
+            </div>
+            <div class="row">
+                <h4>Задания</h4>
+            </div>
             <div class="row" ng-repeat="task in taskList.list track by $index">
                 <div class="col-xs-5">
                     <h5>{{task.val}}</h5>
@@ -228,9 +261,6 @@
         </div>
     </div>
     <div class="row">
-        <div class="col-xs-12 paddingBottom10 homeInfoCloseButton" ng-click="CloseJSON()">
-            <i class="glyphicon glyphicon-remove"></i>
-        </div>
         <div class="col-xs-12">
             <textarea disabled class="homeHalfScreen">
                 {{jsonString}}
