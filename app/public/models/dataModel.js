@@ -245,6 +245,20 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
             }
         }
     };
+    this.GetTaskList = function() {
+        return taskNamesList;
+    };
+    this.AddToTaskList = function(val) {
+        taskNamesList.push(val);
+        taskList.push({
+            name: val,
+            rez: []
+        });
+    };
+    this.RemoveFromTaskList = function(index) {
+        taskNamesList.splice(index, 1);
+        taskList.splice(index, 1);
+    };
     this.Tasks = {
         Get: function(code) {
             var names = taskNamesList.filter(function(taskName) {

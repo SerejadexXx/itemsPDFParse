@@ -231,9 +231,30 @@ module.config(function($stateProvider) {
 
         $scope.jsonShowEnabled = false;
         $scope.jsonString = "";
+        $scope.taskList = {
+            list: [],
+            newTask: {
+                disp: "",
+                val: ""
+            },
+            add: function() {
+                dataModelFunctional.AddToTaskList(JSON.parse(JSON.stringify($scope.taskList.newTask)));
+                $scope.taskList.list = dataModelFunctional.GetTaskList();
+                $scope.dataLoaded = 2;
+            },
+            remove: function(index) {
+                dataModelFunctional.RemoveFromTaskList(index);
+                $scope.taskList.list = dataModelFunctional.GetTaskList();
+                $scope.dataLoaded = 2;
+            }
+        };
         $scope.ShowJSON = function() {
             $scope.jsonShowEnabled = true;
             $scope.jsonString = dataModelFunctional.GetJSON();
+
+            $scope.taskList.list = dataModelFunctional.GetTaskList();
+            $scope.taskList.newTask.disp = "";
+            $scope.taskList.newTask.val = "";
         };
         $scope.CloseJSON = function() {
             $scope.jsonShowEnabled = false;

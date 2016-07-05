@@ -202,6 +202,32 @@
 </div>
 <div class="container" ng-show="jsonShowEnabled">
     <div class="row">
+        <div class="container-fluid">
+            <div class="row" ng-repeat="task in taskList.list track by $index">
+                <div class="col-xs-5">
+                    <h5>{{task.val}}</h5>
+                </div>
+                <div class="col-xs-5">
+                    <h5>{{task.disp}}</h5>
+                </div>
+                <div class="col-xs-2">
+                    <button class="btn btn-danger" ng-click="taskList.remove($index)">remove</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-5">
+                    <input type="text" ng-model="taskList.newTask.val" placeholder="val">
+                </div>
+                <div class="col-xs-5">
+                    <input type="text" ng-model="taskList.newTask.disp" placeholder="disp">
+                </div>
+                <div class="col-xs-2">
+                    <button class="btn btn-default" ng-click="taskList.add()">add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <div class="col-xs-12 paddingBottom10 homeInfoCloseButton" ng-click="CloseJSON()">
             <i class="glyphicon glyphicon-remove"></i>
         </div>
