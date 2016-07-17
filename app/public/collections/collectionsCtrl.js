@@ -144,7 +144,7 @@ module.config(function($stateProvider) {
             });
         };
 
-        $scope.RemoveXLSDisplayListItem = function() {
+        $scope.RemoveXLSDisplayListItem = function(index) {
             $scope.xlsDisplayList.splice(index);
             $scope.DataChanged();
         };

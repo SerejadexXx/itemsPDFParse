@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6638cbc-3a7e-4cce-905a-7fb09bc370df" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/CollectionsModel.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/collections/collections.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/collections/collectionsCtrl.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/collections/filterPicker.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/collections/itemPicker.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/public/models/collectionsModel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.js" afterPath="$PROJECT_DIR$/app/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/app.js" afterPath="$PROJECT_DIR$/app/public/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/css/index.css" afterPath="$PROJECT_DIR$/app/public/css/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/index.html" afterPath="$PROJECT_DIR$/app/public/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/public/collections/collectionsCtrl.js" afterPath="$PROJECT_DIR$/app/public/collections/collectionsCtrl.js" />
     </list>
     <ignored path="itemsPDFParse.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -96,11 +86,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="collectionsCtrl.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="collectionsCtrl.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/public/collections/collectionsCtrl.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="111" column="64" selection-start-line="111" selection-start-column="64" selection-end-line="111" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.79310346">
+              <caret line="146" column="56" selection-start-line="146" selection-start-column="56" selection-end-line="146" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -119,8 +109,8 @@
       <file leaf-file-name="filterPicker.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/public/collections/filterPicker.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.0">
-              <caret line="24" column="10" selection-start-line="17" selection-start-column="4" selection-end-line="24" selection-end-column="10" />
+            <state vertical-scroll-proportion="-9.833333">
+              <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
               <folding>
                 <marker date="1468786936000" expanded="true" signature="37:175" placeholder="{&quot;col-xs-6&quot;: true...}" />
                 <marker date="1468786936000" expanded="true" signature="259:398" placeholder="{&quot;col-xs-6&quot;: true...}" />
@@ -129,10 +119,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="collectionsModel.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="collectionsModel.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/public/models/collectionsModel.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.9172413">
+            <state vertical-scroll-proportion="0.0">
               <caret line="188" column="30" selection-start-line="188" selection-start-column="30" selection-end-line="188" selection-end-column="30" />
               <folding />
             </state>
@@ -167,10 +157,10 @@
         <option value="$PROJECT_DIR$/app/public/css/index.css" />
         <option value="$PROJECT_DIR$/app/public/collections/filterPicker.html" />
         <option value="$PROJECT_DIR$/app/public/models/collectionsModel.js" />
-        <option value="$PROJECT_DIR$/app/public/collections/collectionsCtrl.js" />
         <option value="$PROJECT_DIR$/app/public/collections/itemPicker.html" />
         <option value="$PROJECT_DIR$/app/public/collections/collections.html" />
         <option value="$PROJECT_DIR$/app/app.js" />
+        <option value="$PROJECT_DIR$/app/public/collections/collectionsCtrl.js" />
       </list>
     </option>
   </component>
@@ -744,25 +734,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/collections/filterPicker.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.0">
-          <caret line="24" column="10" selection-start-line="17" selection-start-column="4" selection-end-line="24" selection-end-column="10" />
-          <folding>
-            <marker date="1468786936000" expanded="true" signature="37:175" placeholder="{&quot;col-xs-6&quot;: true...}" />
-            <marker date="1468786936000" expanded="true" signature="259:398" placeholder="{&quot;col-xs-6&quot;: true...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/collections/itemPicker.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875">
-          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/public/collections/collections.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-61.25">
@@ -796,18 +767,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/collections/collectionsCtrl.js">
+    <entry file="file://$PROJECT_DIR$/app/public/models/collectionsModel.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="111" column="64" selection-start-line="111" selection-start-column="64" selection-end-line="111" selection-end-column="64" />
+          <caret line="188" column="30" selection-start-line="188" selection-start-column="30" selection-end-line="188" selection-end-column="30" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/public/models/collectionsModel.js">
+    <entry file="file://$PROJECT_DIR$/app/public/collections/filterPicker.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.9172413">
-          <caret line="188" column="30" selection-start-line="188" selection-start-column="30" selection-end-line="188" selection-end-column="30" />
+        <state vertical-scroll-proportion="-9.833333">
+          <caret line="28" column="30" selection-start-line="28" selection-start-column="30" selection-end-line="28" selection-end-column="30" />
+          <folding>
+            <marker date="1468786936000" expanded="true" signature="37:175" placeholder="{&quot;col-xs-6&quot;: true...}" />
+            <marker date="1468786936000" expanded="true" signature="259:398" placeholder="{&quot;col-xs-6&quot;: true...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/collections/itemPicker.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.875">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/public/collections/collectionsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.79310346">
+          <caret line="146" column="56" selection-start-line="146" selection-start-column="56" selection-end-line="146" selection-end-column="56" />
           <folding />
         </state>
       </provider>
