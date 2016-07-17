@@ -1,0 +1,54 @@
+<div class="row">
+    <div ng-class="{
+        'col-xs-6': true,
+        filterPickerFilterType: true,
+        filterPickerFilterTypeEnabled: newFilter.type=='radio'
+        }" ng-click="SetNewFilterType('radio')">
+        Radio
+    </div>
+    <div ng-class="{
+        'col-xs-6': true,
+        filterPickerFilterType: true,
+        filterPickerFilterTypeEnabled: newFilter.type=='nested'
+        }"  ng-click="SetNewFilterType('nested')">
+        Nested
+    </div>
+</div>
+<div ng-show="newFilter.type == 'radio'">
+    <div class="row" ng-repeat="prop in fieldsAvailable">
+        <div class="col-xs-offset-3 col-xs-6">
+            <input  type="radio"
+                    ng-model="newFilter.item"
+                    name="filter_radio"
+                    ng-value="prop">{{prop}}
+        </div>
+    </div>
+</div>
+<div ng-show="newFilter.type == 'nested'">
+    <div class="row" ng-repeat="prop in fieldsAvailable">
+        <div class="col-xs-6">
+            <input  type="radio"
+                    ng-model="newFilter.item1"
+                    name="filter_nested_group1"
+                    ng-value="prop">{{prop}}
+        </div>
+        <div class="col-xs-6">
+            <input type="radio"
+                   ng-model="newFilter.item2"
+                   name="filter_nested_group2"
+                   ng-value="prop">{{prop}}
+        </div>
+    </div>
+</div>
+<div class="row paddingTop10">
+    <div class="col-xs-offset-2 col-xs-3">
+        <button class="btn btn-block btn-default" ng-click="closeThisDialog('')">
+            Close
+        </button>
+    </div>
+    <div class="col-xs-offset-2 col-xs-3">
+        <button class="btn btn-block btn-success" ng-click="AddNewFilter();closeThisDialog('')">
+            Add
+        </button>
+    </div>
+</div>

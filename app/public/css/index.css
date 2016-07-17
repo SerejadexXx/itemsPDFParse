@@ -114,3 +114,26 @@
     background-color: #e0e0e0;
     color: white;
 }
+
+.collectionsRemoveItem {
+
+}
+
+.collectionsRemoveItem:hover {
+    background-color: #e0e0e0;
+    color: white;
+    cursor: pointer;
+}
+
+.filterPickerFilterType {
+    text-align: center;
+    color: #c0c0c0;
+}
+
+.filterPickerFilterType:hover {
+    cursor: pointer;
+}
+
+.filterPickerFilterTypeEnabled {
+    color: black;
+}
