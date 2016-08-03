@@ -155,6 +155,36 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
             UpdateByLast();
             return defer.promise;
         },
+        UpdateByJSON: function(JSON) {
+            var defer = $q.defer();
+
+            var UpdateByJSON = function(JSON) {
+                if (Server.loadingComplete) {
+                    Server.loadingComplete = false;
+                    $http.post('/data/new', {
+                        accessCode: $window.localStorage.accessCode,
+                        data: JSON
+                    }).then(
+                        function() {
+                            Server.loadingComplete = true;
+                            defer.resolve({});
+                        },
+                        function(err) {
+                            Server.loadingComplete = true;
+                            defer.reject({});
+                        }
+                    );
+                } else {
+                    $timeout(
+                        UpdateByLast,
+                        100
+                    );
+                }
+            };
+
+            UpdateByJSON(JSON);
+            return defer.promise;
+        },
         GetJSON: function() {
             var jItems = items.filter(function(item) {
                 return item.colorUrl || item.colorRGB;
@@ -175,6 +205,9 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
     };
     this.UpdateByLast = function() {
         return Server.UpdateByLast();
+    };
+    this.UpdateByJSON = function(JSON) {
+        return Server.UpdateByJSON(JSON);
     };
     this.GetJSON = function() {
         return Server.GetJSON();

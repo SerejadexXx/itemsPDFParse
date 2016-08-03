@@ -279,4 +279,22 @@ module.config(function($stateProvider) {
         $scope.CloseJSON = function() {
             $scope.jsonShowEnabled = false;
         };
+
+        $scope.jsonToReplace = {
+            strVal: ""
+        };
+        $scope.UpdateByJSON = function() {
+            if (confirm("Отправить данные?")) {
+                $scope.dataLoaded = 0;
+                dataModelFunctional.UpdateByJSON(JSON.parse($scope.jsonToReplace.strVal)).then(
+                    function() {
+                        $scope.dataLoaded = 1;
+                    },
+                    function() {
+                        $scope.dataLoaded = 2;
+                    }
+                );
+            }
+            //console.log(JSON.parse($scope.jsonToReplace.strVal));
+        };
     });
