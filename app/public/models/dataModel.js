@@ -196,7 +196,9 @@ module.service('dataModelFunctional', function($window, $http, $q, $timeout, $ro
                 addedColors: addedColors,
                 taskNamesList: taskNamesList,
                 taskList: taskList,
-                fieldsDisplayList: fieldsDisplayList
+                fieldsDisplayList: fieldsDisplayList,
+                imgCount: imagesCount,
+                imageList: imageList
             });
         }
     };
